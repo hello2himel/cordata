@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cordata</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="app-title">Cordata</h1>
+            <button id="theme-toggle" class="theme-toggle"><i class="ri-moon-line"></i></button>
+        </div>
+
+        <div class="content">
+            <div class="card input-panel">
+                <h2 class="card-title">Coordinates</h2>
+
+                <div id="coordinates-container" class="coordinates-container">
+                    <!-- Coordinate rows will be added here dynamically -->
+                </div>
+
+                <div class="button-container">
+                    <button id="add-coordinate" class="btn btn-primary full-width"><i class="ri-add-line"></i> Add Point</button>
+                    <div class="button-group">
+                        <button id="calculate-btn" class="btn btn-success"><i class="ri-calculator-line"></i> Calculate</button>
+                        <button id="clear-btn" class="btn btn-danger"><i class="ri-delete-bin-line"></i> Clear</button>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+                <div id="spinner" class="spinner"></div>
+            </div>
+
+            <div class="card preview-panel">
+                <h2 class="card-title">Polygon Preview</h2>
+
+                <div id="canvas-container">
+                    <canvas id="polygon-canvas"></canvas>
+                </div>
+
+                <div id="statistics-container" class="statistics">
+                    <div id="area-stat" class="stat-item" style="display: none;">Area: 0.0000</div>
+                    <div id="perimeter-stat" class="stat-item" style="display: none;">Perimeter: 0.0000</div>
+                    <div id="centroid-stat" class="stat-item" style="display: none;">Centroid: (0.0000, 0.0000)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Made with ❤️ by <a href="https://hello2himel.netlify.app" target="_blank">@hello2himel</a> from 🇧🇩</p>
+           <p>This is an open source software. <a class="text-monospace" href="https://github.com/hello2himel/cordata" target="_blank">View Source Code</a></p>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
