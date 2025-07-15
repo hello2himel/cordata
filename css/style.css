@@ -1,0 +1,327 @@
+/* Add animation keyframes for highlighting statistics */
+@keyframes highlightStat {
+    0% { transform: scale(1); background-color: var(--primary-color); color: white; }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); background-color: var(--card-bg); color: var(--text-color); }
+}
+
+@keyframes pulseHighlight {
+    0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+.highlight-stat {
+    animation: highlightStat 1.5s ease-in-out;
+}
+
+.stat-item {
+    padding: 4px 8px;
+    background-color: var(--warning-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.pulse-outline {
+    animation: pulseHighlight 1.5s ease-in-out;
+}
+
+.statistics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.875rem;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+:root {
+    --bg-color: #fff;
+    --text-color: #333;
+    --border-color: #ddd;
+    --card-bg: #f8f9fa;
+    --primary-color: #3b82f6;
+    --danger-color: #ef4444;
+    --success-color: #10b981;
+    --canvas-bg: #fff;
+    --grid-color: #eee;
+    --warning-color: #fefce8;
+}
+
+[data-theme="dark"] {
+    --bg-color: #161616;
+    --text-color: #e5e5e5;
+    --border-color: #333;
+    --card-bg: #1e1e1e;
+    --canvas-bg: #222;
+    --grid-color: #333;
+    --warning-color: #713f12;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.app-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.125rem;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 500;
+}
+
+.input-panel {
+    flex: 1;
+    min-width: 300px;
+}
+
+.preview-panel {
+    flex: 1;
+    min-width: 300px;
+}
+
+.coordinates-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding-right: 5px;
+}
+
+.coordinate-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.coordinate-label {
+    width: 80px;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.coordinate-inputs {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.input-label {
+    margin-right: 5px;
+    font-size: 0.875rem;
+}
+
+.coordinate-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.remove-btn {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    min-width: 36px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-danger禁止
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+    flex: 1;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: white;
+    flex: 1;
+}
+
+.result-container {
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#canvas-container {
+    width: 100%;
+    height: 300px;
+    background-color: var(--canvas-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    opacity: 0.75;
+}
+
+.footer a,
+.footer a:visited {
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: var(--danger-color);
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.spinner {
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border-left-color: var(--primary-color);
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+    display: none;
+}
+
+.text-monospace {
+    font-family: monospace;
+    text-decoration: underline; !important;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .coordinate-label {
+        display: none;
+    }
+}
